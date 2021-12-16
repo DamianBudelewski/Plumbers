@@ -3,7 +3,7 @@
 Example on how to easily scale your plumber API using docker-compose and
 traefik.
 
-![](docs/tests.webm)
+![](docs/tests.gif)
 
 ## Requirements
 
