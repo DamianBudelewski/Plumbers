@@ -3,7 +3,7 @@ library(plumber)
 
 #* @apiTitle Plumbers
 
-#* @apiDescription Plumber with logging 
+#* @apiDescription Plumber with logging
 
 #* Simulate a long running process and log
 #* @param max_s Maximum number of seconds a process will sleep for
