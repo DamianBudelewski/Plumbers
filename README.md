@@ -3,6 +3,8 @@
 Example on how to easily scale your plumber API using docker-compose and
 traefik.
 
+![](docs/tests.mov)
+
 ## Requirements
 
 - docker
@@ -10,14 +12,9 @@ traefik.
 
 ## Setup
 
-Run `docker-compose up --scale 5` in the main directory
+Run `docker-compose up --scale 5` in the main directory or `make run`
 
 ## Testing
 
-![](docs/logs.png)
-
-While seeing logs from the previouse command, run in the separate bash session
-`./test.sh`. This will invoke 20 concurrent requests that will be handled by 5
-containers in this example. Some will be handled instantly, the other 15 will
-have to wait, but will be executed. You can try to parse `--scale 20` and all
-requests will be handled immediately.
+Change directory to `tests` and run `locust --headless --users 5 --spawn-rate 1
+-H http://localhost` or in main repo directory run `make test`
